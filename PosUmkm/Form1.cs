@@ -91,5 +91,33 @@ namespace PosUmkm
         {
 
         }
+
+        private void button10_Click_1(object sender, EventArgs e)
+        {
+            {
+                DialogResult result = MessageBox.Show(
+                    "Apakah Anda yakin ingin logout?",
+                    "Konfirmasi Logout",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                if (result == DialogResult.Yes)
+                {
+                    // Tutup Dashboard -> otomatis LoginPage muncul kembali
+                    this.Close();
+                }
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            // Buka form pembelian
+            PembelianPage pembelianPage = new PembelianPage();
+            pembelianPage.Show();
+
+            // Sembunyikan form dashboard agar tidak double window
+            this.Hide();
+        }
     }
 }

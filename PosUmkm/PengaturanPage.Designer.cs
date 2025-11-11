@@ -59,6 +59,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -95,6 +97,8 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel4.Controls.Add(this.textBox5);
+            this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.textBox1);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.button2);
@@ -107,12 +111,12 @@
             this.panel4.Controls.Add(this.button1);
             this.panel4.Location = new System.Drawing.Point(229, 99);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(776, 208);
+            this.panel4.Size = new System.Drawing.Size(776, 239);
             this.panel4.TabIndex = 44;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(134, 91);
+            this.textBox1.Location = new System.Drawing.Point(134, 124);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(220, 22);
             this.textBox1.TabIndex = 53;
@@ -122,7 +126,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 8.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label6.Location = new System.Drawing.Point(17, 94);
+            this.label6.Location = new System.Drawing.Point(17, 127);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(104, 19);
             this.label6.TabIndex = 52;
@@ -131,7 +135,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI", 8.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(379, 126);
+            this.button2.Location = new System.Drawing.Point(379, 159);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(134, 30);
             this.button2.TabIndex = 51;
@@ -140,21 +144,21 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(134, 67);
+            this.textBox4.Location = new System.Drawing.Point(134, 100);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(220, 22);
             this.textBox4.TabIndex = 50;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(134, 43);
+            this.textBox3.Location = new System.Drawing.Point(134, 76);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(544, 22);
             this.textBox3.TabIndex = 49;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(134, 19);
+            this.textBox2.Location = new System.Drawing.Point(134, 52);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(220, 22);
             this.textBox2.TabIndex = 48;
@@ -164,7 +168,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 8.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label5.Location = new System.Drawing.Point(17, 70);
+            this.label5.Location = new System.Drawing.Point(17, 103);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 19);
             this.label5.TabIndex = 47;
@@ -175,7 +179,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 8.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(17, 46);
+            this.label4.Location = new System.Drawing.Point(17, 79);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 19);
             this.label4.TabIndex = 46;
@@ -186,7 +190,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 8.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(17, 22);
+            this.label3.Location = new System.Drawing.Point(17, 55);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 19);
             this.label3.TabIndex = 45;
@@ -195,7 +199,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI", 8.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(239, 126);
+            this.button1.Location = new System.Drawing.Point(239, 159);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(134, 30);
             this.button1.TabIndex = 44;
@@ -422,6 +426,24 @@
             this.panel1.Size = new System.Drawing.Size(1015, 52);
             this.panel1.TabIndex = 26;
             // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(134, 28);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(220, 22);
+            this.textBox5.TabIndex = 55;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 8.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label7.Location = new System.Drawing.Point(17, 31);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(91, 19);
+            this.label7.TabIndex = 54;
+            this.label7.Text = "Nama Pemilik";
+            // 
             // PengaturanPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -484,5 +506,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label7;
     }
 }

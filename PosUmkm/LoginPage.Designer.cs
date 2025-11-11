@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginPage));
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_Login = new System.Windows.Forms.Button();
+            this.btn_register = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_password = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_username = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -55,41 +55,41 @@
             this.label4.Text = "Forget Password";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // button1
+            // btn_Login
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Location = new System.Drawing.Point(57, 221);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(259, 30);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_Login.BackColor = System.Drawing.Color.Black;
+            this.btn_Login.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Login.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Login.Location = new System.Drawing.Point(57, 221);
+            this.btn_Login.Name = "btn_Login";
+            this.btn_Login.Size = new System.Drawing.Size(259, 30);
+            this.btn_Login.TabIndex = 16;
+            this.btn_Login.Text = "Login";
+            this.btn_Login.UseVisualStyleBackColor = false;
+            this.btn_Login.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btn_register
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button2.Location = new System.Drawing.Point(57, 297);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(259, 30);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Register";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btn_register.BackColor = System.Drawing.Color.Black;
+            this.btn_register.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_register.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_register.Location = new System.Drawing.Point(57, 297);
+            this.btn_register.Name = "btn_register";
+            this.btn_register.Size = new System.Drawing.Size(259, 30);
+            this.btn_register.TabIndex = 17;
+            this.btn_register.Text = "Register";
+            this.btn_register.UseVisualStyleBackColor = false;
+            this.btn_register.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btn_register);
+            this.panel1.Controls.Add(this.btn_Login);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txt_password);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txt_username);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(423, 12);
@@ -101,21 +101,21 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label5.Location = new System.Drawing.Point(8, 273);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 8F);
+            this.label5.Location = new System.Drawing.Point(40, 273);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(349, 21);
+            this.label5.Size = new System.Drawing.Size(292, 19);
             this.label5.TabIndex = 18;
             this.label5.Text = "Regist here if you don\'t have an account";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // textBox2
+            // txt_password
             // 
-            this.textBox2.Location = new System.Drawing.Point(57, 152);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(259, 22);
-            this.textBox2.TabIndex = 14;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txt_password.Location = new System.Drawing.Point(57, 152);
+            this.txt_password.Name = "txt_password";
+            this.txt_password.Size = new System.Drawing.Size(259, 22);
+            this.txt_password.TabIndex = 14;
+            this.txt_password.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
             // 
@@ -128,13 +128,13 @@
             this.label3.Text = "Password";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox1
+            // txt_username
             // 
-            this.textBox1.Location = new System.Drawing.Point(57, 94);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(259, 22);
-            this.textBox1.TabIndex = 12;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txt_username.Location = new System.Drawing.Point(57, 94);
+            this.txt_username.Name = "txt_username";
+            this.txt_username.Size = new System.Drawing.Size(259, 22);
+            this.txt_username.TabIndex = 12;
+            this.txt_username.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -191,13 +191,13 @@
         #endregion
 
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_Login;
+        private System.Windows.Forms.Button btn_register;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_password;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_username;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
