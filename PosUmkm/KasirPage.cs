@@ -1,6 +1,7 @@
 ﻿using MySql.Data;
 using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Asn1.Ocsp;
+using Org.BouncyCastle.Bcpg;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,8 +17,11 @@ namespace PosUmkm
     public partial class KasirPage : Form
     {
         string connStr = "server=localhost;uid=root;pwd=;database=db_pos;";
-        public KasirPage()
+        private int userId;
+        public KasirPage(int id_user)
         {
+            userId = id_user;
+
             InitializeComponent();
 
             // Hubungkan event load
@@ -83,33 +87,38 @@ namespace PosUmkm
                 {
                     conn.Open();
 
+                    // 🔹 Cek transaksi terakhir (kalau mau disimpan urutan)
                     string query = "SELECT no_transaksi FROM tbl_transaksi ORDER BY id_transaksi DESC LIMIT 1";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     object result = cmd.ExecuteScalar();
 
-                    string nextNo;
+                    // 🔹 Bagian yang kamu minta
+                    // Kode dasar transaksi (bisa tetap, contoh: 0027070)
+                    string kodeDasar = "0027070";
 
+                    // 🔹 Ambil tanggal, bulan, dan tahun saat ini
+                    string tanggal = DateTime.Now.ToString("dd");  // contoh: 25
+                    string bulan = DateTime.Now.ToString("MM");    // contoh: 12
+                    string tahun = DateTime.Now.ToString("yyyy");  // contoh: 2025
+
+                    // 🔹 Susun kode transaksi sesuai format
+                    string nextNo = $"{kodeDasar}{tanggal}{bulan}/INV/VT/{tahun}";
+
+                    // 🔹 (Opsional) Jika ingin menambahkan nomor urut tambahan di akhir
+                    // Bisa aktifkan baris berikut:
+                    
                     if (result != null && result != DBNull.Value)
                     {
-                        string lastNo = result.ToString();
-                        int lastNumber = 0;
-
-                        if (lastNo.StartsWith("#TSX"))
-                        {
-                            int.TryParse(lastNo.Substring(4), out lastNumber);
-                        }
-
-                        nextNo = $"#TSX{(lastNumber + 1):D3}";
+                        int lastId = 1;
+                        int.TryParse(result.ToString().Split('/')[0].Substring(kodeDasar.Length), out lastId);
+                        nextNo = $"{kodeDasar}{tanggal}{bulan}/INV/VT/{tahun}-{lastId + 1}";
                     }
-                    else
-                    {
-                        nextNo = "#TSX001";
-                    }
+                    
 
                     txt_noTransaksi.Text = nextNo;
                 }
 
-                // Set tanggal dan jam otomatis
+                // 🔹 Set tanggal dan jam otomatis
                 dtp_tanggalKasir.Value = DateTime.Now;
                 txt_jam.Text = DateTime.Now.ToString("HH:mm:ss");
             }
@@ -407,7 +416,7 @@ namespace PosUmkm
         private void button5_Click(object sender, EventArgs e)
         {
             // Buka form dashboard pembelian
-            PembelianPage pembelianPage = new PembelianPage();
+            PembelianPage pembelianPage = new PembelianPage(userId);
             pembelianPage.Show();
 
             // Sembunyikan form kasir agar tidak double window
@@ -417,21 +426,56 @@ namespace PosUmkm
         private void button4_Click(object sender, EventArgs e)
         {
             // Buka form product
-            ProductPage productPage = new ProductPage();
+            ProductPage productPage = new ProductPage(userId);
             productPage.Show();
 
-            // Sembunyikan form product agar tidak double window
+            // Sembunyikan form kasir agar tidak double window
             this.Hide();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             // Buka form riwayat dan laporan transaksi
-            RiwayatTransaksi riwayatTransaksi = new RiwayatTransaksi();
+            RiwayatTransaksi riwayatTransaksi = new RiwayatTransaksi(userId);
             riwayatTransaksi.Show();
 
             // Sembunyikan form kasir agar tidak double window
             this.Hide();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                    "Apakah Anda yakin ingin logout?",
+                    "Konfirmasi Logout",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+            if (result == DialogResult.Yes)
+            {
+                // Tampilkan kembali form login
+                LoginPage loginPage = new LoginPage();
+                loginPage.Show();
+
+                // Sembunyikan form utama agar tidak menutup aplikasi
+                this.Hide();
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            // Buka form riwayat dan laporan transaksi
+            PengaturanPage pengaturanPage = new PengaturanPage(userId);
+            pengaturanPage.Show();
+
+            // Sembunyikan form pembelian agar tidak double window
+            this.Hide();
+        }
+
+        private void KasirPage_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

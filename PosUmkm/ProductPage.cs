@@ -1,18 +1,19 @@
-﻿using System;
+﻿using ClosedXML.Excel;
+using DocumentFormat.OpenXml.Spreadsheet;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using MySql.Data;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data;
-using MySql.Data.MySqlClient;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
-using System.IO;
-using ClosedXML.Excel;
 
 namespace PosUmkm
 {
@@ -25,10 +26,15 @@ namespace PosUmkm
         private DataSet ds = new DataSet();
         private DataTable dt;
         private string alamat, query;
-        public ProductPage()
+
+        private int userId;
+        public ProductPage(int id_user)
         {
             alamat = "server=localhost; database=db_pos; username=root; password=;";
             koneksi = new MySqlConnection(alamat);
+
+            userId = id_user;
+
 
             InitializeComponent();
         }
@@ -506,18 +512,15 @@ private void label9_Click(object sender, EventArgs e)
 
         private void button5_Click(object sender, EventArgs e)
         {
-            // Buka form pembelian
-            PembelianPage pembelianPage = new PembelianPage();
+            PembelianPage pembelianPage = new PembelianPage(userId);
             pembelianPage.Show();
-
-            // Sembunyikan form product agar tidak double window
             this.Hide();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             // Buka form kasir
-            KasirPage kasirPage = new KasirPage();
+            KasirPage kasirPage = new KasirPage(userId);
             kasirPage.Show();
 
             // Sembunyikan form product agar tidak double window
@@ -527,10 +530,37 @@ private void label9_Click(object sender, EventArgs e)
         private void button7_Click(object sender, EventArgs e)
         {
             // Buka form riwayat dan laporan
-            RiwayatTransaksi riwayatTransaksi = new RiwayatTransaksi();
+            RiwayatTransaksi riwayatTransaksi = new RiwayatTransaksi(userId);
             riwayatTransaksi.Show();
 
             // Sembunyikan form product agar tidak double window
+            this.Hide();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                    "Apakah Anda yakin ingin logout?",
+                    "Konfirmasi Logout",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+            if (result == DialogResult.Yes)
+            {
+                // Tampilkan kembali form login
+                LoginPage loginPage = new LoginPage();
+                loginPage.Show();
+
+                // Sembunyikan form utama agar tidak menutup aplikasi
+                this.Hide();
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            PengaturanPage pengaturanPage = new PengaturanPage(userId);
+            pengaturanPage.Show();
             this.Hide();
         }
 

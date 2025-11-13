@@ -12,6 +12,14 @@ namespace PosUmkm
 {
     public partial class Form1 : Form
     {
+        private int userId;
+        public Form1(int id_user)
+        {
+            InitializeComponent();
+
+            userId = id_user;
+        }
+
         public Form1()
         {
             InitializeComponent();
@@ -104,8 +112,12 @@ namespace PosUmkm
 
                 if (result == DialogResult.Yes)
                 {
-                    // Tutup Dashboard -> otomatis LoginPage muncul kembali
-                    this.Close();
+                    // Tampilkan kembali form login
+                    LoginPage loginPage = new LoginPage();
+                    loginPage.Show();
+
+                    // Sembunyikan form utama agar tidak menutup aplikasi
+                    this.Hide();
                 }
             }
         }
@@ -113,7 +125,7 @@ namespace PosUmkm
         private void button5_Click(object sender, EventArgs e)
         {
             // Buka form pembelian
-            PembelianPage pembelianPage = new PembelianPage();
+            PembelianPage pembelianPage = new PembelianPage(userId);
             pembelianPage.Show();
 
             // Sembunyikan form dashboard agar tidak double window
@@ -123,7 +135,7 @@ namespace PosUmkm
         private void button4_Click(object sender, EventArgs e)
         {
             // Buka form dashboard
-            ProductPage productPage = new ProductPage();
+            ProductPage productPage = new ProductPage(userId);
             productPage.Show();
 
             // Sembunyikan form pembelian agar tidak double window
@@ -133,7 +145,7 @@ namespace PosUmkm
         private void button6_Click(object sender, EventArgs e)
         {
             // Buka form dashboard
-            KasirPage kasirPage = new KasirPage();
+            KasirPage kasirPage = new KasirPage(userId);
             kasirPage.Show();
 
             // Sembunyikan form product agar tidak double window
@@ -143,10 +155,18 @@ namespace PosUmkm
         private void button7_Click(object sender, EventArgs e)
         {
             // Buka form riwayat transaksi
-            RiwayatTransaksi riwayatTransaksi = new RiwayatTransaksi();
+            RiwayatTransaksi riwayatTransaksi = new RiwayatTransaksi(userId);
             riwayatTransaksi.Show();
 
             // Sembunyikan form dashboard agar tidak double window
+            this.Hide();
+        }
+
+        private void button9_Click_1(object sender, EventArgs e)
+        {
+            PengaturanPage pengaturanPage = new PengaturanPage(userId);
+            pengaturanPage.Show();
+
             this.Hide();
         }
     }

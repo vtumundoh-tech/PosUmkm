@@ -20,9 +20,13 @@ namespace PosUmkm
     {
         string connStr = "server=localhost;uid=root;pwd=;database=db_pos;";
 
-        public RiwayatTransaksi()
+        private int userId;
+
+        public RiwayatTransaksi(int id_user)
         {
             InitializeComponent();
+
+            userId = id_user;
 
             // Event saat form load
             this.Load += RiwayatTransaksi_Load;
@@ -368,7 +372,7 @@ namespace PosUmkm
         private void button4_Click(object sender, EventArgs e)
         {
             // Buka form product
-            ProductPage productPage = new ProductPage();
+            ProductPage productPage = new ProductPage(userId);
             productPage.Show();
 
             // Sembunyikan form riwayat agar tidak double window
@@ -472,7 +476,7 @@ namespace PosUmkm
         private void button5_Click(object sender, EventArgs e)
         {
             // Buka form pembelian
-            PembelianPage pembelianPage = new PembelianPage();
+            PembelianPage pembelianPage = new PembelianPage(userId);
             pembelianPage.Show();
 
             // Sembunyikan form riwayat agar tidak double window
@@ -482,10 +486,40 @@ namespace PosUmkm
         private void button6_Click(object sender, EventArgs e)
         {
             // Buka form kasir
-            KasirPage kasirPage = new KasirPage();
+            KasirPage kasirPage = new KasirPage(userId);
             kasirPage.Show();
 
             // Sembunyikan form riwayat agar tidak double window
+            this.Hide();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                    "Apakah Anda yakin ingin logout?",
+                    "Konfirmasi Logout",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+            if (result == DialogResult.Yes)
+            {
+                // Tampilkan kembali form login
+                LoginPage loginPage = new LoginPage();
+                loginPage.Show();
+
+                // Sembunyikan form utama agar tidak menutup aplikasi
+                this.Hide();
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            // Buka form riwayat dan laporan transaksi
+            PengaturanPage pengaturanPage = new PengaturanPage(userId);
+            pengaturanPage.Show();
+
+            // Sembunyikan form pembelian agar tidak double window
             this.Hide();
         }
     }

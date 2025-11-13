@@ -82,7 +82,9 @@
             // 
             // btn_daftar
             // 
-            this.btn_daftar.BackColor = System.Drawing.Color.Black;
+            this.btn_daftar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_daftar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btn_daftar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_daftar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_daftar.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btn_daftar.Location = new System.Drawing.Point(490, 235);
