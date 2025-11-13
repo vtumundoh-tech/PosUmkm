@@ -146,6 +146,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_simpan);
             this.Name = "EditPembelianPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditPembelianPage";
             this.Load += new System.EventHandler(this.EditPembelianPage_Load);
             this.ResumeLayout(false);

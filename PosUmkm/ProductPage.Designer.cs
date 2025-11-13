@@ -52,23 +52,26 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_cariBarangProduct = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txt_kodeBarang = new System.Windows.Forms.TextBox();
+            this.txt_namaBarang = new System.Windows.Forms.TextBox();
+            this.txt_hargaBeli = new System.Windows.Forms.TextBox();
+            this.txt_hargaJual = new System.Windows.Forms.TextBox();
+            this.txt_stok = new System.Windows.Forms.TextBox();
+            this.txt_satuan = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_product = new System.Windows.Forms.DataGridView();
+            this.button13 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.dtp_tanggalProduct = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -81,7 +84,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_product)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -218,6 +221,7 @@
             this.button7.Text = "Laporan";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // pictureBox5
             // 
@@ -243,6 +247,7 @@
             this.button6.Text = "Kasir";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // pictureBox4
             // 
@@ -268,6 +273,7 @@
             this.button5.Text = "Pembelian";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // pictureBox3
             // 
@@ -318,6 +324,7 @@
             this.button3.Text = "Dashboard";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // pictureBox1
             // 
@@ -353,187 +360,238 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI", 8.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(336, 279);
+            this.button1.Location = new System.Drawing.Point(272, 304);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(134, 30);
             this.button1.TabIndex = 4;
             this.button1.Text = "Tambah";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(604, 183);
+            this.groupBox1.Controls.Add(this.txt_cariBarangProduct);
+            this.groupBox1.Location = new System.Drawing.Point(604, 208);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(393, 61);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pencarian Kode/Nama Barang";
             // 
-            // textBox1
+            // txt_cariBarangProduct
             // 
-            this.textBox1.Location = new System.Drawing.Point(17, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(355, 22);
-            this.textBox1.TabIndex = 0;
+            this.txt_cariBarangProduct.Location = new System.Drawing.Point(17, 21);
+            this.txt_cariBarangProduct.Name = "txt_cariBarangProduct";
+            this.txt_cariBarangProduct.Size = new System.Drawing.Size(355, 22);
+            this.txt_cariBarangProduct.TabIndex = 0;
+            this.txt_cariBarangProduct.TextChanged += new System.EventHandler(this.txt_cariBarangProduct_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 8.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(237, 110);
+            this.label3.Location = new System.Drawing.Point(237, 132);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 19);
             this.label3.TabIndex = 10;
             this.label3.Text = "KODE BARANG";
+            this.label3.Click += new System.EventHandler(this.label3_Click_1);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 8.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(237, 134);
+            this.label4.Location = new System.Drawing.Point(237, 159);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(108, 19);
             this.label4.TabIndex = 11;
             this.label4.Text = "NAMA BARANG";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 8.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(237, 160);
+            this.label5.Location = new System.Drawing.Point(237, 185);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 19);
             this.label5.TabIndex = 12;
             this.label5.Text = "HARGA BELI";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 8.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(237, 186);
+            this.label6.Location = new System.Drawing.Point(237, 213);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 19);
             this.label6.TabIndex = 13;
             this.label6.Text = "HARGA JUAL";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 8.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(237, 210);
+            this.label7.Location = new System.Drawing.Point(237, 240);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(41, 19);
             this.label7.TabIndex = 14;
             this.label7.Text = "STOK";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 8.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(237, 236);
+            this.label8.Location = new System.Drawing.Point(237, 267);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(60, 19);
             this.label8.TabIndex = 15;
             this.label8.Text = "SATUAN";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // textBox2
+            // txt_kodeBarang
             // 
-            this.textBox2.Location = new System.Drawing.Point(354, 107);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(220, 22);
-            this.textBox2.TabIndex = 16;
+            this.txt_kodeBarang.Location = new System.Drawing.Point(364, 129);
+            this.txt_kodeBarang.Name = "txt_kodeBarang";
+            this.txt_kodeBarang.Size = new System.Drawing.Size(241, 22);
+            this.txt_kodeBarang.TabIndex = 16;
+            this.txt_kodeBarang.TextChanged += new System.EventHandler(this.txt_kodeBarang_TextChanged);
             // 
-            // textBox3
+            // txt_namaBarang
             // 
-            this.textBox3.Location = new System.Drawing.Point(354, 131);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(544, 22);
-            this.textBox3.TabIndex = 17;
+            this.txt_namaBarang.Location = new System.Drawing.Point(364, 156);
+            this.txt_namaBarang.Name = "txt_namaBarang";
+            this.txt_namaBarang.Size = new System.Drawing.Size(632, 22);
+            this.txt_namaBarang.TabIndex = 17;
+            this.txt_namaBarang.TextChanged += new System.EventHandler(this.txt_namaBarang_TextChanged);
             // 
-            // textBox4
+            // txt_hargaBeli
             // 
-            this.textBox4.Location = new System.Drawing.Point(354, 157);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(220, 22);
-            this.textBox4.TabIndex = 18;
+            this.txt_hargaBeli.Location = new System.Drawing.Point(364, 182);
+            this.txt_hargaBeli.Name = "txt_hargaBeli";
+            this.txt_hargaBeli.Size = new System.Drawing.Size(220, 22);
+            this.txt_hargaBeli.TabIndex = 18;
+            this.txt_hargaBeli.TextChanged += new System.EventHandler(this.txt_hargaBeli_TextChanged);
             // 
-            // textBox5
+            // txt_hargaJual
             // 
-            this.textBox5.Location = new System.Drawing.Point(354, 183);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(220, 22);
-            this.textBox5.TabIndex = 19;
+            this.txt_hargaJual.Location = new System.Drawing.Point(364, 210);
+            this.txt_hargaJual.Name = "txt_hargaJual";
+            this.txt_hargaJual.Size = new System.Drawing.Size(220, 22);
+            this.txt_hargaJual.TabIndex = 19;
+            this.txt_hargaJual.TextChanged += new System.EventHandler(this.txt_hargaJual_TextChanged);
             // 
-            // textBox6
+            // txt_stok
             // 
-            this.textBox6.Location = new System.Drawing.Point(354, 207);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(220, 22);
-            this.textBox6.TabIndex = 20;
+            this.txt_stok.Location = new System.Drawing.Point(364, 237);
+            this.txt_stok.Name = "txt_stok";
+            this.txt_stok.Size = new System.Drawing.Size(220, 22);
+            this.txt_stok.TabIndex = 20;
+            this.txt_stok.TextChanged += new System.EventHandler(this.txt_stok_TextChanged);
             // 
-            // textBox7
+            // txt_satuan
             // 
-            this.textBox7.Location = new System.Drawing.Point(354, 233);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(220, 22);
-            this.textBox7.TabIndex = 21;
+            this.txt_satuan.Location = new System.Drawing.Point(364, 264);
+            this.txt_satuan.Name = "txt_satuan";
+            this.txt_satuan.Size = new System.Drawing.Size(220, 22);
+            this.txt_satuan.TabIndex = 21;
+            this.txt_satuan.TextChanged += new System.EventHandler(this.txt_satuan_TextChanged);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI", 8.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(476, 279);
+            this.button2.Location = new System.Drawing.Point(412, 304);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(134, 30);
             this.button2.TabIndex = 22;
             this.button2.Text = "Edit";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button11
             // 
             this.button11.Font = new System.Drawing.Font("Segoe UI", 8.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(616, 279);
+            this.button11.Location = new System.Drawing.Point(552, 304);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(134, 30);
             this.button11.TabIndex = 23;
             this.button11.Text = "Hapus";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button12
             // 
             this.button12.Font = new System.Drawing.Font("Segoe UI", 8.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(756, 279);
+            this.button12.Location = new System.Drawing.Point(692, 304);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(134, 30);
             this.button12.TabIndex = 24;
             this.button12.Text = "Refresh";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
-            // dataGridView1
+            // dgv_product
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(241, 334);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(755, 344);
-            this.dataGridView1.TabIndex = 25;
+            this.dgv_product.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_product.Location = new System.Drawing.Point(241, 351);
+            this.dgv_product.Name = "dgv_product";
+            this.dgv_product.RowHeadersWidth = 51;
+            this.dgv_product.RowTemplate.Height = 24;
+            this.dgv_product.Size = new System.Drawing.Size(755, 327);
+            this.dgv_product.TabIndex = 25;
+            this.dgv_product.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_product_CellContentClick);
+            // 
+            // button13
+            // 
+            this.button13.Font = new System.Drawing.Font("Segoe UI", 8.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.Location = new System.Drawing.Point(832, 302);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(134, 30);
+            this.button13.TabIndex = 26;
+            this.button13.Text = "Cetak Laporan";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 8.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(237, 104);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(70, 19);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "TANGGAL";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // dtp_tanggalProduct
+            // 
+            this.dtp_tanggalProduct.Location = new System.Drawing.Point(364, 101);
+            this.dtp_tanggalProduct.Name = "dtp_tanggalProduct";
+            this.dtp_tanggalProduct.Size = new System.Drawing.Size(241, 22);
+            this.dtp_tanggalProduct.TabIndex = 28;
+            this.dtp_tanggalProduct.ValueChanged += new System.EventHandler(this.dtp_tanggalProduct_ValueChanged);
             // 
             // ProductPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1015, 697);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtp_tanggalProduct);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.button13);
+            this.Controls.Add(this.dgv_product);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txt_satuan);
+            this.Controls.Add(this.txt_stok);
+            this.Controls.Add(this.txt_hargaJual);
+            this.Controls.Add(this.txt_hargaBeli);
+            this.Controls.Add(this.txt_namaBarang);
+            this.Controls.Add(this.txt_kodeBarang);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -546,7 +604,9 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "ProductPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProductPage";
+            this.Load += new System.EventHandler(this.ProductPage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -562,7 +622,7 @@
             this.panel3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_product)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -593,22 +653,25 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_cariBarangProduct;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txt_kodeBarang;
+        private System.Windows.Forms.TextBox txt_namaBarang;
+        private System.Windows.Forms.TextBox txt_hargaBeli;
+        private System.Windows.Forms.TextBox txt_hargaJual;
+        private System.Windows.Forms.TextBox txt_stok;
+        private System.Windows.Forms.TextBox txt_satuan;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_product;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DateTimePicker dtp_tanggalProduct;
     }
 }

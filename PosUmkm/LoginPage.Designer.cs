@@ -60,9 +60,9 @@
             this.btn_Login.BackColor = System.Drawing.Color.Black;
             this.btn_Login.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Login.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Login.Location = new System.Drawing.Point(57, 221);
+            this.btn_Login.Location = new System.Drawing.Point(57, 218);
             this.btn_Login.Name = "btn_Login";
-            this.btn_Login.Size = new System.Drawing.Size(259, 30);
+            this.btn_Login.Size = new System.Drawing.Size(259, 38);
             this.btn_Login.TabIndex = 16;
             this.btn_Login.Text = "Login";
             this.btn_Login.UseVisualStyleBackColor = false;
@@ -75,7 +75,7 @@
             this.btn_register.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btn_register.Location = new System.Drawing.Point(57, 297);
             this.btn_register.Name = "btn_register";
-            this.btn_register.Size = new System.Drawing.Size(259, 30);
+            this.btn_register.Size = new System.Drawing.Size(259, 33);
             this.btn_register.TabIndex = 17;
             this.btn_register.Text = "Register";
             this.btn_register.UseVisualStyleBackColor = false;

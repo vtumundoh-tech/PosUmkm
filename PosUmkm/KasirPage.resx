@@ -1986,7 +1986,7 @@
         XTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriXeW/h/sYH6AdFD6UeVjxS
         fNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2dmnafvvF05dOJZ+nPFmYKf5X+
         tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/MF72Rf3P4LeNt37vwd5MLWe+x7ys/
-        6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDgAACw4BQL7hQQAAT9ZJREFUeF7tvd3PLcl1
+        6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDAAACwwBP0AiyAAAT9ZJREFUeF7tvd3PLcl1
         n+e17yneMxRvByBtXlEBLZsXoxiMnBBjIyBIQ4MY4YWAsSaAYmjkmAwDcAwDGgrICIhlkwBpBAFEc0A5
         F6EzBGEYATEUKSSxFdkiKYmkPpgvJ3Y+7T9AwTrqOqzzq95dXbu7166u/fyAByDXvOd9d9devVZ11Vpd
         f+KP/uiP/gQAAAA8FoUBAAAAxqcwAAAAwPgUBgAAABifwgAAAADjUxgAAABgfAoDAAAAjE9hAAAAgPEp
@@ -3609,4 +3609,7 @@
         1cSL+BY7i1djc7O67jF+B8rNeHp6IuHUoxk9UI7x2/CcTselR/vyF8l3b0CTrTA/AAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="tmr_kasir.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

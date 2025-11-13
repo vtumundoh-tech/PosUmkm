@@ -407,6 +407,51 @@ namespace PosUmkm
             }
         }
 
+        private void txt_kodeTransaksi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtp_tanggalBeli_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            // Buka form product
+            ProductPage productPage = new ProductPage();
+            productPage.Show();
+
+            // Sembunyikan form pembelian agar tidak double window
+            this.Hide();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            // Buka form kasir
+            KasirPage kasirPage = new KasirPage();
+            kasirPage.Show();
+
+            // Sembunyikan form pembelian agar tidak double window
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            // Buka form riwayat dan laporan transaksi
+            RiwayatTransaksi riwayatTransaksi = new RiwayatTransaksi();
+            riwayatTransaksi.Show();
+
+            // Sembunyikan form pembelian agar tidak double window
+            this.Hide();
+        }
+
         private void PembelianPage_Load(object sender, EventArgs e)
         {
             TampilData();

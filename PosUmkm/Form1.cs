@@ -119,5 +119,35 @@ namespace PosUmkm
             // Sembunyikan form dashboard agar tidak double window
             this.Hide();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            // Buka form dashboard
+            ProductPage productPage = new ProductPage();
+            productPage.Show();
+
+            // Sembunyikan form pembelian agar tidak double window
+            this.Hide();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            // Buka form dashboard
+            KasirPage kasirPage = new KasirPage();
+            kasirPage.Show();
+
+            // Sembunyikan form product agar tidak double window
+            this.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            // Buka form riwayat transaksi
+            RiwayatTransaksi riwayatTransaksi = new RiwayatTransaksi();
+            riwayatTransaksi.Show();
+
+            // Sembunyikan form dashboard agar tidak double window
+            this.Hide();
+        }
     }
 }

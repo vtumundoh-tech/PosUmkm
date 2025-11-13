@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KasirPage));
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,46 +50,36 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.btn_hapusItem = new System.Windows.Forms.Button();
+            this.dgv_produkKasir = new System.Windows.Forms.DataGridView();
+            this.txt_request = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.txt_keterangan = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_cariProduk = new System.Windows.Forms.TextBox();
+            this.txt_kembalian = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button11 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button12 = new System.Windows.Forms.Button();
+            this.btn_batalTransaksi = new System.Windows.Forms.Button();
+            this.txt_bayar = new System.Windows.Forms.TextBox();
+            this.btn_selesaiTransaksi = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btn_inputPemesanan = new System.Windows.Forms.Button();
+            this.txt_jumlah = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lbl_total = new System.Windows.Forms.Label();
+            this.tmr_kasir = new System.Windows.Forms.Timer(this.components);
             this.panel7 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
+            this.txt_jam = new System.Windows.Forms.TextBox();
+            this.dtp_tanggalKasir = new System.Windows.Forms.DateTimePicker();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txt_noTransaksi = new System.Windows.Forms.TextBox();
+            this.dgv_transaksi = new System.Windows.Forms.DataGridView();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -100,10 +91,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_produkKasir)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_transaksi)).BeginInit();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -113,7 +106,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(221, 52);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(794, 41);
+            this.panel3.Size = new System.Drawing.Size(1085, 41);
             this.panel3.TabIndex = 28;
             // 
             // label2
@@ -157,7 +150,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 52);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(221, 645);
+            this.panel2.Size = new System.Drawing.Size(221, 771);
             this.panel2.TabIndex = 27;
             // 
             // button10
@@ -223,6 +216,7 @@
             this.button7.Text = "Riwayat";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // pictureBox5
             // 
@@ -273,6 +267,7 @@
             this.button5.Text = "Pembelian";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // pictureBox3
             // 
@@ -298,6 +293,7 @@
             this.button4.Text = "Product";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // pictureBox2
             // 
@@ -323,6 +319,7 @@
             this.button3.Text = "Dashboard";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // pictureBox1
             // 
@@ -342,248 +339,280 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1015, 52);
+            this.panel1.Size = new System.Drawing.Size(1306, 52);
             this.panel1.TabIndex = 26;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.panel4.Controls.Add(this.textBox9);
+            this.panel4.Controls.Add(this.btn_hapusItem);
+            this.panel4.Controls.Add(this.dgv_produkKasir);
+            this.panel4.Controls.Add(this.txt_request);
             this.panel4.Controls.Add(this.label23);
-            this.panel4.Controls.Add(this.textBox10);
+            this.panel4.Controls.Add(this.txt_keterangan);
             this.panel4.Controls.Add(this.label25);
             this.panel4.Controls.Add(this.groupBox1);
-            this.panel4.Controls.Add(this.textBox3);
+            this.panel4.Controls.Add(this.txt_kembalian);
             this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.button11);
-            this.panel4.Controls.Add(this.textBox4);
-            this.panel4.Controls.Add(this.button12);
+            this.panel4.Controls.Add(this.btn_batalTransaksi);
+            this.panel4.Controls.Add(this.txt_bayar);
+            this.panel4.Controls.Add(this.btn_selesaiTransaksi);
             this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.button1);
-            this.panel4.Controls.Add(this.textBox2);
+            this.panel4.Controls.Add(this.btn_inputPemesanan);
+            this.panel4.Controls.Add(this.txt_jumlah);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.textBox1);
-            this.panel4.Controls.Add(this.label3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(778, 93);
+            this.panel4.Location = new System.Drawing.Point(977, 93);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(237, 604);
+            this.panel4.Size = new System.Drawing.Size(329, 730);
             this.panel4.TabIndex = 29;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // textBox3
+            // btn_hapusItem
             // 
-            this.textBox3.Location = new System.Drawing.Point(12, 483);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(216, 22);
-            this.textBox3.TabIndex = 9;
+            this.btn_hapusItem.BackColor = System.Drawing.Color.Red;
+            this.btn_hapusItem.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.btn_hapusItem.Location = new System.Drawing.Point(94, 502);
+            this.btn_hapusItem.Name = "btn_hapusItem";
+            this.btn_hapusItem.Size = new System.Drawing.Size(151, 26);
+            this.btn_hapusItem.TabIndex = 16;
+            this.btn_hapusItem.Text = "Hapus Item";
+            this.btn_hapusItem.UseVisualStyleBackColor = false;
+            this.btn_hapusItem.Click += new System.EventHandler(this.btn_hapusItem_Click);
+            // 
+            // dgv_produkKasir
+            // 
+            this.dgv_produkKasir.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.dgv_produkKasir.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_produkKasir.Location = new System.Drawing.Point(0, 86);
+            this.dgv_produkKasir.Name = "dgv_produkKasir";
+            this.dgv_produkKasir.ReadOnly = true;
+            this.dgv_produkKasir.RowHeadersWidth = 51;
+            this.dgv_produkKasir.RowTemplate.Height = 24;
+            this.dgv_produkKasir.Size = new System.Drawing.Size(329, 230);
+            this.dgv_produkKasir.TabIndex = 15;
+            this.dgv_produkKasir.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // txt_request
+            // 
+            this.txt_request.Location = new System.Drawing.Point(12, 441);
+            this.txt_request.Name = "txt_request";
+            this.txt_request.Size = new System.Drawing.Size(305, 22);
+            this.txt_request.TabIndex = 14;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.label23.Location = new System.Drawing.Point(9, 422);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(58, 19);
+            this.label23.TabIndex = 13;
+            this.label23.Text = "Request";
+            // 
+            // txt_keterangan
+            // 
+            this.txt_keterangan.Location = new System.Drawing.Point(12, 394);
+            this.txt_keterangan.Name = "txt_keterangan";
+            this.txt_keterangan.Size = new System.Drawing.Size(305, 22);
+            this.txt_keterangan.TabIndex = 12;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.label25.Location = new System.Drawing.Point(9, 375);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(79, 19);
+            this.label25.TabIndex = 11;
+            this.label25.Text = "Keterangan";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txt_cariProduk);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(13, 11);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(304, 62);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Cari Nama/Kode Produk";
+            // 
+            // txt_cariProduk
+            // 
+            this.txt_cariProduk.Location = new System.Drawing.Point(6, 21);
+            this.txt_cariProduk.Name = "txt_cariProduk";
+            this.txt_cariProduk.Size = new System.Drawing.Size(292, 25);
+            this.txt_cariProduk.TabIndex = 0;
+            this.txt_cariProduk.TextChanged += new System.EventHandler(this.txt_cariProduk_TextChanged);
+            // 
+            // txt_kembalian
+            // 
+            this.txt_kembalian.Location = new System.Drawing.Point(12, 596);
+            this.txt_kembalian.Name = "txt_kembalian";
+            this.txt_kembalian.Size = new System.Drawing.Size(305, 22);
+            this.txt_kembalian.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.label5.Location = new System.Drawing.Point(9, 464);
+            this.label5.Location = new System.Drawing.Point(9, 577);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 19);
             this.label5.TabIndex = 8;
             this.label5.Text = "Kembalian";
             // 
-            // button11
+            // btn_batalTransaksi
             // 
-            this.button11.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.button11.Location = new System.Drawing.Point(44, 565);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(151, 26);
-            this.button11.TabIndex = 7;
-            this.button11.Text = "Batal Transaksi";
-            this.button11.UseVisualStyleBackColor = true;
+            this.btn_batalTransaksi.BackColor = System.Drawing.Color.Red;
+            this.btn_batalTransaksi.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.btn_batalTransaksi.Location = new System.Drawing.Point(94, 667);
+            this.btn_batalTransaksi.Name = "btn_batalTransaksi";
+            this.btn_batalTransaksi.Size = new System.Drawing.Size(151, 26);
+            this.btn_batalTransaksi.TabIndex = 7;
+            this.btn_batalTransaksi.Text = "Batal Transaksi";
+            this.btn_batalTransaksi.UseVisualStyleBackColor = false;
+            this.btn_batalTransaksi.Click += new System.EventHandler(this.btn_batalTransaksi_Click);
             // 
-            // textBox4
+            // txt_bayar
             // 
-            this.textBox4.Location = new System.Drawing.Point(12, 432);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(216, 22);
-            this.textBox4.TabIndex = 7;
+            this.txt_bayar.Location = new System.Drawing.Point(12, 545);
+            this.txt_bayar.Name = "txt_bayar";
+            this.txt_bayar.Size = new System.Drawing.Size(305, 22);
+            this.txt_bayar.TabIndex = 7;
+            this.txt_bayar.TextChanged += new System.EventHandler(this.txt_bayar_TextChanged);
             // 
-            // button12
+            // btn_selesaiTransaksi
             // 
-            this.button12.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.button12.Location = new System.Drawing.Point(44, 526);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(151, 26);
-            this.button12.TabIndex = 6;
-            this.button12.Text = "Selesaikan Transaksi";
-            this.button12.UseVisualStyleBackColor = true;
+            this.btn_selesaiTransaksi.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_selesaiTransaksi.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.btn_selesaiTransaksi.Location = new System.Drawing.Point(94, 628);
+            this.btn_selesaiTransaksi.Name = "btn_selesaiTransaksi";
+            this.btn_selesaiTransaksi.Size = new System.Drawing.Size(151, 26);
+            this.btn_selesaiTransaksi.TabIndex = 6;
+            this.btn_selesaiTransaksi.Text = "Selesaikan Transaksi";
+            this.btn_selesaiTransaksi.UseVisualStyleBackColor = false;
+            this.btn_selesaiTransaksi.Click += new System.EventHandler(this.btn_selesaiTransaksi_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.label6.Location = new System.Drawing.Point(9, 413);
+            this.label6.Location = new System.Drawing.Point(9, 526);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 19);
             this.label6.TabIndex = 6;
             this.label6.Text = "Bayar";
             // 
-            // button1
+            // btn_inputPemesanan
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.button1.Location = new System.Drawing.Point(44, 287);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 27);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Input Pemesanan";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_inputPemesanan.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.btn_inputPemesanan.Location = new System.Drawing.Point(94, 469);
+            this.btn_inputPemesanan.Name = "btn_inputPemesanan";
+            this.btn_inputPemesanan.Size = new System.Drawing.Size(151, 27);
+            this.btn_inputPemesanan.TabIndex = 4;
+            this.btn_inputPemesanan.Text = "Input Pemesanan";
+            this.btn_inputPemesanan.UseVisualStyleBackColor = true;
+            this.btn_inputPemesanan.Click += new System.EventHandler(this.btn_inputPesanan_Click);
             // 
-            // textBox2
+            // txt_jumlah
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 164);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(216, 22);
-            this.textBox2.TabIndex = 3;
+            this.txt_jumlah.Location = new System.Drawing.Point(12, 346);
+            this.txt_jumlah.Name = "txt_jumlah";
+            this.txt_jumlah.Size = new System.Drawing.Size(305, 22);
+            this.txt_jumlah.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.label4.Location = new System.Drawing.Point(9, 145);
+            this.label4.Location = new System.Drawing.Point(9, 327);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 19);
             this.label4.TabIndex = 2;
             this.label4.Text = "Jumlah";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(12, 117);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(216, 22);
-            this.textBox1.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.label3.Location = new System.Drawing.Point(9, 98);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 19);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Nama Barang";
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.panel5.Controls.Add(this.label8);
-            this.panel5.Controls.Add(this.label7);
+            this.panel5.Controls.Add(this.lbl_total);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(221, 619);
+            this.panel5.Location = new System.Drawing.Point(221, 745);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(557, 78);
+            this.panel5.Size = new System.Drawing.Size(756, 78);
             this.panel5.TabIndex = 30;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(337, 25);
+            this.label8.Location = new System.Drawing.Point(14, 25);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(163, 40);
+            this.label8.Size = new System.Drawing.Size(112, 40);
             this.label8.TabIndex = 1;
-            this.label8.Text = "Rp. 50.000";
+            this.label8.Text = "TOTAL:";
             // 
-            // label7
+            // lbl_total
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(13, 25);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 40);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "TOTAL";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel6.Controls.Add(this.label22);
-            this.panel6.Controls.Add(this.label24);
-            this.panel6.Controls.Add(this.label18);
-            this.panel6.Controls.Add(this.label19);
-            this.panel6.Controls.Add(this.label21);
-            this.panel6.Controls.Add(this.label20);
-            this.panel6.Controls.Add(this.label15);
-            this.panel6.Controls.Add(this.label16);
-            this.panel6.Controls.Add(this.label17);
-            this.panel6.Controls.Add(this.panel7);
-            this.panel6.Controls.Add(this.label11);
-            this.panel6.Controls.Add(this.label10);
-            this.panel6.Controls.Add(this.label9);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(221, 93);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(557, 526);
-            this.panel6.TabIndex = 31;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(49, 117);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(103, 16);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Indomie Goreng";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(201, 117);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(21, 16);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "25";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(341, 117);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(45, 16);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "50.000";
+            this.lbl_total.AutoSize = true;
+            this.lbl_total.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold);
+            this.lbl_total.Location = new System.Drawing.Point(348, 25);
+            this.lbl_total.Name = "lbl_total";
+            this.lbl_total.Size = new System.Drawing.Size(0, 40);
+            this.lbl_total.TabIndex = 0;
+            this.lbl_total.Click += new System.EventHandler(this.lbl_total_Click);
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.panel7.Controls.Add(this.label14);
+            this.panel7.Controls.Add(this.txt_jam);
+            this.panel7.Controls.Add(this.dtp_tanggalKasir);
             this.panel7.Controls.Add(this.label13);
             this.panel7.Controls.Add(this.label12);
-            this.panel7.Controls.Add(this.textBox7);
-            this.panel7.Controls.Add(this.textBox6);
-            this.panel7.Controls.Add(this.textBox5);
+            this.panel7.Controls.Add(this.txt_noTransaksi);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(557, 73);
+            this.panel7.Size = new System.Drawing.Size(756, 73);
             this.panel7.TabIndex = 3;
             // 
-            // textBox5
+            // label14
             // 
-            this.textBox5.Location = new System.Drawing.Point(20, 30);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(178, 22);
-            this.textBox5.TabIndex = 0;
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(528, 8);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(33, 19);
+            this.label14.TabIndex = 7;
+            this.label14.Text = "Jam";
             // 
-            // textBox6
+            // txt_jam
             // 
-            this.textBox6.Location = new System.Drawing.Point(204, 30);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(178, 22);
-            this.textBox6.TabIndex = 1;
+            this.txt_jam.Location = new System.Drawing.Point(532, 30);
+            this.txt_jam.Name = "txt_jam";
+            this.txt_jam.ReadOnly = true;
+            this.txt_jam.Size = new System.Drawing.Size(146, 22);
+            this.txt_jam.TabIndex = 6;
             // 
-            // textBox7
+            // dtp_tanggalKasir
             // 
-            this.textBox7.Location = new System.Drawing.Point(388, 30);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(151, 22);
-            this.textBox7.TabIndex = 2;
+            this.dtp_tanggalKasir.Location = new System.Drawing.Point(277, 30);
+            this.dtp_tanggalKasir.Name = "dtp_tanggalKasir";
+            this.dtp_tanggalKasir.Size = new System.Drawing.Size(249, 22);
+            this.dtp_tanggalKasir.TabIndex = 5;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(273, 11);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(55, 19);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "Tanggal";
             // 
             // label12
             // 
@@ -595,171 +624,43 @@
             this.label12.TabIndex = 3;
             this.label12.Text = "No Transaksi";
             // 
-            // label13
+            // txt_noTransaksi
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(201, 11);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(55, 19);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "Tanggal";
+            this.txt_noTransaksi.Location = new System.Drawing.Point(20, 30);
+            this.txt_noTransaksi.Name = "txt_noTransaksi";
+            this.txt_noTransaksi.ReadOnly = true;
+            this.txt_noTransaksi.Size = new System.Drawing.Size(250, 22);
+            this.txt_noTransaksi.TabIndex = 0;
+            this.txt_noTransaksi.TextChanged += new System.EventHandler(this.txt_noTransaksi_TextChanged);
             // 
-            // label14
+            // dgv_transaksi
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(385, 11);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(33, 19);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "Jam";
+            this.dgv_transaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_transaksi.Location = new System.Drawing.Point(6, 86);
+            this.dgv_transaksi.Name = "dgv_transaksi";
+            this.dgv_transaksi.ReadOnly = true;
+            this.dgv_transaksi.RowHeadersWidth = 51;
+            this.dgv_transaksi.RowTemplate.Height = 24;
+            this.dgv_transaksi.Size = new System.Drawing.Size(744, 560);
+            this.dgv_transaksi.TabIndex = 13;
+            this.dgv_transaksi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_transaksi_CellContentClick);
             // 
-            // label15
+            // panel6
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(200, 86);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(32, 19);
-            this.label15.TabIndex = 6;
-            this.label15.Text = "Qty";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(48, 86);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(40, 19);
-            this.label16.TabIndex = 5;
-            this.label16.Text = "ITEM";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(16, 86);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(27, 19);
-            this.label17.TabIndex = 4;
-            this.label17.Text = "No";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(238, 86);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(46, 19);
-            this.label20.TabIndex = 7;
-            this.label20.Text = "Harga";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(515, 86);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(35, 19);
-            this.label18.TabIndex = 10;
-            this.label18.Text = "REQ";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(425, 86);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(31, 19);
-            this.label19.TabIndex = 9;
-            this.label19.Text = "KET";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(340, 86);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(38, 19);
-            this.label21.TabIndex = 8;
-            this.label21.Text = "Total";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(13, 11);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(215, 62);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Cari Nama/Kode Produk";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(6, 21);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(203, 25);
-            this.textBox8.TabIndex = 0;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(239, 117);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(38, 16);
-            this.label24.TabIndex = 11;
-            this.label24.Text = "2.000";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(17, 117);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(14, 16);
-            this.label22.TabIndex = 12;
-            this.label22.Text = "1";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(12, 259);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(216, 22);
-            this.textBox9.TabIndex = 14;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.label23.Location = new System.Drawing.Point(9, 240);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(58, 19);
-            this.label23.TabIndex = 13;
-            this.label23.Text = "Request";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(12, 212);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(216, 22);
-            this.textBox10.TabIndex = 12;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.label25.Location = new System.Drawing.Point(9, 193);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(79, 19);
-            this.label25.TabIndex = 11;
-            this.label25.Text = "Keterangan";
+            this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel6.Controls.Add(this.dgv_transaksi);
+            this.panel6.Controls.Add(this.panel7);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(221, 93);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(756, 652);
+            this.panel6.TabIndex = 32;
             // 
             // KasirPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1015, 697);
+            this.ClientSize = new System.Drawing.Size(1306, 823);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -767,6 +668,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "KasirPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KasirPage";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -782,14 +684,15 @@
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_produkKasir)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_transaksi)).EndInit();
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -809,51 +712,41 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_bayar;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btn_inputPemesanan;
+        private System.Windows.Forms.TextBox txt_jumlah;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button btn_batalTransaksi;
+        private System.Windows.Forms.Button btn_selesaiTransaksi;
+        private System.Windows.Forms.TextBox txt_kembalian;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbl_total;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txt_cariProduk;
+        private System.Windows.Forms.TextBox txt_request;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox txt_keterangan;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.DataGridView dgv_produkKasir;
+        private System.Windows.Forms.Button btn_hapusItem;
+        private System.Windows.Forms.Timer tmr_kasir;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txt_jam;
+        private System.Windows.Forms.DateTimePicker dtp_tanggalKasir;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox txt_noTransaksi;
+        private System.Windows.Forms.DataGridView dgv_transaksi;
+        private System.Windows.Forms.Panel panel6;
     }
 }

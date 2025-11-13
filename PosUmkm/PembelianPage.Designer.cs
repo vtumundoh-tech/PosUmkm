@@ -165,6 +165,7 @@
             this.button7.Text = "Riwayat";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // pictureBox5
             // 
@@ -190,6 +191,7 @@
             this.button6.Text = "Kasir";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // pictureBox4
             // 
@@ -215,6 +217,7 @@
             this.button5.Text = "Pembelian";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // pictureBox3
             // 
@@ -240,6 +243,7 @@
             this.button4.Text = "Product";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // pictureBox2
             // 
@@ -384,6 +388,7 @@
             this.txt_kodeTransaksi.Name = "txt_kodeTransaksi";
             this.txt_kodeTransaksi.Size = new System.Drawing.Size(256, 22);
             this.txt_kodeTransaksi.TabIndex = 35;
+            this.txt_kodeTransaksi.TextChanged += new System.EventHandler(this.txt_kodeTransaksi_TextChanged);
             // 
             // label6
             // 
@@ -472,6 +477,7 @@
             this.dtp_tanggalBeli.Name = "dtp_tanggalBeli";
             this.dtp_tanggalBeli.Size = new System.Drawing.Size(256, 22);
             this.dtp_tanggalBeli.TabIndex = 45;
+            this.dtp_tanggalBeli.ValueChanged += new System.EventHandler(this.dtp_tanggalBeli_ValueChanged);
             // 
             // PembelianPage
             // 
@@ -497,6 +503,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "PembelianPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PembelianPage";
             this.Load += new System.EventHandler(this.PembelianPage_Load);
             this.panel2.ResumeLayout(false);

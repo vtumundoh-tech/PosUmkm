@@ -87,7 +87,7 @@
             this.btn_daftar.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btn_daftar.Location = new System.Drawing.Point(490, 235);
             this.btn_daftar.Name = "btn_daftar";
-            this.btn_daftar.Size = new System.Drawing.Size(259, 30);
+            this.btn_daftar.Size = new System.Drawing.Size(259, 36);
             this.btn_daftar.TabIndex = 25;
             this.btn_daftar.Text = "Daftar";
             this.btn_daftar.UseVisualStyleBackColor = false;
@@ -116,7 +116,7 @@
             this.btn_kembali.BackColor = System.Drawing.Color.Black;
             this.btn_kembali.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_kembali.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_kembali.Location = new System.Drawing.Point(490, 271);
+            this.btn_kembali.Location = new System.Drawing.Point(490, 277);
             this.btn_kembali.Name = "btn_kembali";
             this.btn_kembali.Size = new System.Drawing.Size(259, 30);
             this.btn_kembali.TabIndex = 28;
@@ -160,6 +160,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "RegisterPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterPage";
             this.Load += new System.EventHandler(this.RegisterPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
